@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net48</TargetFramework>
-        <NoWarn>$(NoWarn);NU5128;NU5131</NoWarn>
+        <NoWarn>$(NoWarn);NU5128;NU5131,CS2008</NoWarn>
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <OutputPath>..\output</OutputPath>
         <PackageId>UK.Revit.Api.2022</PackageId>

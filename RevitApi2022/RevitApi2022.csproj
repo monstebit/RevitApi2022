@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net48</TargetFramework>
+        <NoWarn>$(NoWarn);NU5128;NU5131</NoWarn>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <OutputPath>..\output</OutputPath>
+        <PackageId>UK.Revit.Api.2022</PackageId>
+        <PackageVersion>2022.1.21</PackageVersion>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageType>Dependency</PackageType>
+        <Authors>UK</Authors>
+        <Description>Library for Revit 2022 plugin development</Description>
+        <PackageTags>revit2022;api;sdk</PackageTags>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/monstebit/RevitApi2022.git</RepositoryUrl>
+        <PackageReadmeFile>Readme.md</PackageReadmeFile>
+        <PackageLicenseFile>License.md</PackageLicenseFile>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackVersion>2022.1.21</PackVersion>
+        <RevitFramework>net48</RevitFramework>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <None Include="..\License.md" Link="NuGet\License.md" PackagePath="" Pack="true" />
+        <None Include="..\Readme.md" Link="NuGet\Readme.md" PackagePath="" Pack="true"/>
+        <Content Include="Content\$(PackVersion)\*.*" PackagePath="ref\$(RevitFramework)\" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    </PropertyGroup>
+    
+</Project>
